@@ -77,7 +77,9 @@ var ProductBox = React.createClass({
   render: function() {
     return (
       <div className="productBox">
+        <div class="Jumbotron">
         <h1>Solarlux Web Apps</h1>
+        </div>
         <ProductList data={this.state.data} />
         <ProductForm onProductSubmit={this.handleProductSubmit} />
       </div>
