@@ -162,4 +162,6 @@ var ProductForm = React.createClass({
   }
 });
 
+var lastword = <h1>yes</h1>;
 ReactDOM.render(<World/>, document.getElementById('content'));
+ReactDOM.render(lastword, document.getElementById('content'));
