@@ -17,29 +17,29 @@ class Jumbo extends React.Component {
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-                <li className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">Type A<strong className="caret"></strong></a>
-                    <ul className="dropdown-menu">
-                        <li>
-                            <a href="#">Action</a>
-                        </li>
-                        <li>
-                            <a href="#">Another action</a>
-                        </li>
-                        <li>
-                        <a href="#">Something else here</a>
-                        </li>
-                        <li className="divider">
-                        </li>
-                        <li>
-                            <a href="#">Separated link</a>
-                        </li>
-                        <li className="divider">
-                        </li>
-                        <li>
-                            <a href="#">One more separated link</a>
-                        </li>
-                    </ul>
+            <li className="dropdown">
+            <a href="#" className="dropdown-toggle" data-toggle="dropdown">Type A<strong className="caret"></strong></a>
+            <ul className="dropdown-menu">
+            <li>
+            <a href="#">Action</a>
+            </li>
+            <li>
+            <a href="#">Another action</a>
+            </li>
+            <li>
+            <a href="#">Something else here</a>
+            </li>
+            <li className="divider">
+            </li>
+            <li>
+            <a href="#">Separated link</a>
+            </li>
+            <li className="divider">
+            </li>
+            <li>
+            <a href="#">One more separated link</a>
+            </li>
+            </ul>
 
             </li>
             <li className="dropdown">
@@ -131,8 +131,7 @@ class Jumbo extends React.Component {
             </Jumbotron>
             </div>
             )
-}
-}
-
+    }
+};
 
 ReactDOM.render(<Jumbo/>, document.getElementById('header'));
