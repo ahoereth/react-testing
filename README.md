@@ -22,4 +22,4 @@ You can change the port number by setting the `$PORT` environment variable befor
 PORT=3001 node server.js
 ```
 ### Screenshot
-![alt tag](https://raw.githubusercontent.com/slx-dev/react-testing/masteer/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/slx-dev/react-testing/master/screenshot.png)
