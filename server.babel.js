@@ -48,6 +48,7 @@ app.post('/api/products', function(req, res) {
       id: Date.now(),
       productName: req.body.productName,
       text: req.body.text,
+      src: req.body.src
     };
     products.push(newProduct);
     fs.writeFile(PRODUCTS_FILE, JSON.stringify(products, null, 4), function(err) {

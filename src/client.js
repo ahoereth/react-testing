@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Jumbo from './header.js';
-import Test from './products.js';
+import {Grid,Row,Col} from 'react-bootstrap';
 
 // class World extends React.Component {
 //   render() {
@@ -30,10 +30,49 @@ import Test from './products.js';
 //   }
 // };
 
+// var Component = React.createClass({
+//     render: function() {
+//         return <div>{ this.props.param }</div>;
+//     }
+// });
+
+// var Hello = React.createClass({
+//   render: function() {
+//     var elements = this.props.elements || [];
+//     var components = elements.map(
+//       function(b) {
+//         return <Component param={b} />;
+//       }
+//       );
+
+//     var groups = [];
+//     var children = [];
+//     while(components.length > 0) {
+//       children.push(components.shift());
+//       if (children.length === 5) {
+//         groups.push(<div className="grid grid-pad"> {children}</div>);
+//         children = [];
+//       }
+//     }
+// // remaining
+// if (children.length > 0 ) {
+//   groups.push(<div className="grid grid-pad">
+//     {children}</div>);
+//   }
+
+//   return (
+//     <div className='holder'>
+//     {groups}
+//     </div>
+//     );
+//   }
+// });
+
 var Product = React.createClass({
   rawMarkup: function() {
     var md = new Remarkable();
     var rawMarkup = md.render(this.props.children.toString());
+
     return { __html: rawMarkup };
   },
 
@@ -44,6 +83,9 @@ var Product = React.createClass({
       {this.props.productName}
       </h3>
       <span dangerouslySetInnerHTML={this.rawMarkup()} />
+      <div className="screenshot">
+      <img src= {this.props.src} />
+      </div>
       </div>
       );
   }
@@ -96,7 +138,9 @@ var ProductBox = React.createClass({
         return (
           <div className="productBox">
           <h1>Solarlux Web Apps</h1>
+          <div className="row">
           <ProductList data={this.state.data} />
+          </div>
           <ProductForm onProductSubmit={this.handleProductSubmit} />
           </div>
           );
@@ -106,22 +150,23 @@ var ProductBox = React.createClass({
 var ProductList = React.createClass({
   render: function() {
     var productNodes = this.props.data.map(function(product) {
-    //   return (
-    //     <div className="productList">
-    //     <Product productName="Best app A">Really good one</Product>
-    //     <Product productName="Best app B">Even better</Product>
-    //     </div>
-    //     );
-    // });
-    return (
-      <Product productName={product.productName} key={product.id}>
-      {product.text}
-      </Product>
-      );
-  });
+      return (
+        <div>Dev
+        <Product productName={product.productName} key={product.id} text ={product.text} src={product.src}>
+        {product.text}
+        </Product>
+        </div>
+        );
+    });
     return (
       <div className="productList">
+      <Grid>
+      <Row className="show-grid">
+      <Col sm={6} md={3}>
       {productNodes}
+      </Col>
+      </Row>
+      </Grid>
       </div>
       );
   }
@@ -129,7 +174,7 @@ var ProductList = React.createClass({
 
 var ProductForm = React.createClass({
   getInitialState: function() {
-    return { productName: '', text: '' };
+    return { productName: '', text: '' , src: ''};
   },
   handleProductNameChange: function(e) {
     this.setState({ productName: e.target.value });
@@ -137,19 +182,25 @@ var ProductForm = React.createClass({
   handleTextChange: function(e) {
     this.setState({ text: e.target.value });
   },
+  handleImageChange: function(e) {
+    this.setState({ src: e.target.value });
+  },
   handleSubmit: function(e) {
     e.preventDefault();
     var productName = this.state.productName.trim();
+    var filename = $('input[type=file]').val().split('\\').pop();
     var text = this.state.text.trim();
     if (!text || !productName) {
       return;
     }
-    this.props.onProductSubmit({ productName: productName, text: text });
-    this.setState({ productName: '', text: '' });
+    this.props.onProductSubmit({ productName: productName, text: text, src: filename });
+    this.setState({ productName: '', text: '',src: '' });
   },
   render: function() {
     return (
       <form className="productForm" onSubmit={this.handleSubmit}>
+
+      <h3>Upload an application (in development)</h3>
       <input
       type="text"
       placeholder="Product name"
@@ -161,6 +212,12 @@ var ProductForm = React.createClass({
       placeholder="Description"
       value={this.state.text}
       onChange={this.handleTextChange}
+      />
+      <input
+      type="file"
+      placeholder="Product screenshot"
+      value={this.state.src}
+      onChange={this.handleImageChange}
       />
       <input type="submit" value="Post" />
       </form>
