@@ -21,5 +21,10 @@ You can change the port number by setting the `$PORT` environment variable befor
 ```sh
 PORT=3001 node server.js
 ```
+
+### Alternative layouts and functions
+
+client.js and client1.js use local and http GET mechanisms, respectively, and show the table in two formats.
+
 ### Screenshot
 ![alt tag](https://raw.githubusercontent.com/slx-dev/react-testing/master/screenshot.png)
