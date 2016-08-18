@@ -8,12 +8,17 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 import 'bootstrap/dist/css/bootstrap.css';
 import Application from './application';
 import PRODUCTS from './products.json';
+var $ = require ('jquery');
+
+var result = id => $.grep(PRODUCTS, function(e){ return e.id === id; });
 
 const Product = ({ params: { id } }) => (
     <div>
         <h3>{id}</h3>
+        {JSON.stringify(result(id))}
     </div>
     )
+
 const Products = ({ children }) => (
   <div>
   <h2>Display Item</h2>

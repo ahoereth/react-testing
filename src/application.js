@@ -21,7 +21,7 @@ render() {
         <span dangerouslySetInnerHTML={this.rawMarkup()} />
         <div className="screenshot">
         <a href={"products/" + this.props.id}>
-        <img src= {this.props.imageUrl} />
+        <img src={this.props.imageUrl} />
         </a>
         </div>
         </div>
