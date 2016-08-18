@@ -17,7 +17,6 @@ render() {
         <div className="application">
         <h3 className="applicationName">
         {this.props.name}
-
         </h3>
         <span dangerouslySetInnerHTML={this.rawMarkup()} />
         <div className="screenshot">
@@ -25,6 +24,7 @@ render() {
         <img src= {this.props.imageUrl} />
         </a>
         </div>
-        </div>);
-}
+        </div>
+        );
+    }
 }

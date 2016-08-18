@@ -1,11 +1,18 @@
 import React from 'react';
+import {Row,Col} from 'reactstrap';
+import Application from './application';
 
 export default class Product extends React.Component {
+    constructor(id) {
+        super();
+
+    }
     render() {
         return (
-            <div>
-            <h1>Product Details</h1>
-            Check out our product
-            </div>);
+          <div>
+          <h3>Product {this.props.id}</h3>
+
+          </div>
+          );
     }
 }

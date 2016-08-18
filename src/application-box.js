@@ -1,7 +1,7 @@
 import React from 'react';
 import ApplicationList from './application-list';
 import ApplicationForm from './application-form';
-import PRODUCTS from './products.json'
+import PRODUCTS from './products.json';
 
 
 export default class ApplicationBox extends React.Component {
