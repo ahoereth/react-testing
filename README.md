@@ -7,7 +7,9 @@ See information below on extending the Create React App by Facebook. Original li
 [X] - Bootstrap start
 [X] - Basic routing
 [ ] - Load items as pages with details when clicked
+[ ] - API to Backend connection
 [ ] - Make app as modular as possible
+
 
 ## Available Scripts
 
