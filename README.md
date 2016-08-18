@@ -1,46 +1,7 @@
-Below you will find some information on how to perform common tasks.  
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md).
+## Solarlux Web Apps Testing Repository
 
-## Sending Feedback
+See information below on getting started using the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
-
-## Folder Structure
-
-After creation, your project should look like this:
-
-```
-my-app/
-  README.md
-  index.html
-  favicon.ico
-  node_modules/
-  package.json
-  src/
-    App.css
-    App.js
-    index.css
-    index.js
-    logo.svg
-```
-
-For the project to build, **these files must exist with exact filenames**:
-
-* `index.html` is the page template;
-* `favicon.ico` is the icon you see in the browser tab;
-* `src/index.js` is the JavaScript entry point.
-
-You can delete or rename the other files.
-
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.  
-You need to **put any JS and CSS files inside `src`**, or Webpack won’t see them.
-
-You can, however, create more top-level directories.  
-They will not be included in the production build so you can use them for things like documentation.
-
->**Known Issue:**
->
->You may encounter an issue where changing a file inside `src` doesn’t trigger a recompilation. Most likely this happens because the path in your filesystem differs in its casing from the path you imported. For example, if a file is called `App.js` but you are importing `app.js`, the watcher might not recognize changes to it. We are [considering](https://github.com/facebookincubator/create-react-app/issues/240) enforcing some checks to prevent this. If this doesn’t help, check out the page on [troubleshooting watching](https://webpack.github.io/docs/troubleshooting.html#watching).
 
 ## Available Scripts
 
@@ -66,12 +27,6 @@ Your app is ready to be deployed!
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## How To...
 
 ### Install a Dependency
@@ -84,7 +39,7 @@ npm install --save <library-name>
 
 ### Import a Component
 
-This project setup supports ES6 modules thanks to Babel.  
+This project setup supports ES6 modules thanks to Babel.
 While you can still use `require()` and `module.exports`, we encourage you to use [`import` and `export`](http://exploringjs.com/es6/ch_modules.html) instead.
 
 For example:
@@ -255,7 +210,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 ```
 import React, { Component } from 'react';
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
-``` 
+```
 
 Now you are ready to use the imported React Bootstrap components within your component hierarchy defined in the render method. Here is an example [App.js](https://github.com/manavsehgal/react-eshop/blob/master/src/App.js) redone using React Bootstrap.
 
@@ -267,7 +222,7 @@ Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plug
 
 They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can do.
 
-You would need to install an ESLint plugin for your editor first.  
+You would need to install an ESLint plugin for your editor first.
 Then make sure `package.json` of your project ends with this block:
 
 ```js
@@ -279,7 +234,7 @@ Then make sure `package.json` of your project ends with this block:
 }
 ```
 
-Projects generated with `react-scripts@0.2.0` and higher should already have it.  
+Projects generated with `react-scripts@0.2.0` and higher should already have it.
 If you don’t need ESLint integration with your editor, you can safely delete those three lines from your `package.json`.
 
 Finally, you will need to install some packages *globally*:
@@ -290,61 +245,6 @@ npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import esli
 
 We recognize that this is suboptimal, but it is currently required due to the way we hide the ESLint dependency. The ESLint team is already [working on a solution to this](https://github.com/eslint/eslint/issues/3458) so this may become unnecessary in a couple of months.
 
-### Add Flow
-
-Flow typing is currently [not supported out of the box](https://github.com/facebookincubator/create-react-app/issues/72) with the default `.flowconfig` generated by Flow. If you run it, you might get errors like this:
-
-```
-node_modules/fbjs/lib/Deferred.js.flow:60
- 60:     Promise.prototype.done.apply(this._promise, arguments);
-                           ^^^^ property `done`. Property not found in
-495: declare class Promise<+R> {
-     ^ Promise. See lib: /private/tmp/flow/flowlib_34952d31/core.js:495
-
-node_modules/fbjs/lib/shallowEqual.js.flow:29
- 29:     return x !== 0 || 1 / (x: $FlowIssue) === 1 / (y: $FlowIssue);
-                                   ^^^^^^^^^^ identifier `$FlowIssue`. Could not resolve name
-
-src/App.js:3
-  3: import logo from './logo.svg';
-                      ^^^^^^^^^^^^ ./logo.svg. Required module not found
-
-src/App.js:4
-  4: import './App.css';
-            ^^^^^^^^^^^ ./App.css. Required module not found
-
-src/index.js:5
-  5: import './index.css';
-            ^^^^^^^^^^^^^ ./index.css. Required module not found
-```
-
-To fix this, change your `.flowconfig` to look like this:
-
-```
-[libs]
-./node_modules/fbjs/flow/lib
-
-[options]
-esproposal.class_static_fields=enable
-esproposal.class_instance_fields=enable
-
-module.name_mapper='^\(.*\)\.css$' -> 'react-scripts/config/flow/css'
-module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -> 'react-scripts/config/flow/file'
-
-suppress_type=$FlowIssue
-suppress_type=$FlowFixMe
-```
-
-Re-run flow, and you shouldn’t get any extra issues.
-
-If you later `eject`, you’ll need to replace `react-scripts` references with the `<PROJECT_ROOT>` placeholder, for example:
-
-```
-module.name_mapper='^\(.*\)\.css$' -> '<PROJECT_ROOT>/config/flow/css'
-module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -> '<PROJECT_ROOT>/config/flow/file'
-```
-
-We will consider integrating more tightly with Flow in the future so that you don’t have to do this.
 
 ### Deploy
 
