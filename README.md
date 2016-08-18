@@ -1,7 +1,13 @@
 ## Solarlux Web Apps Testing Repository
 
-See information below on getting started using the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
+See information below on extending the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
 
+### Wish-list
+
+[X] - Bootstrap start
+[X] - Basic routing
+[ ] - Load items as pages with details when clicked
+[ ] - Make app as modular as possible
 
 ## Available Scripts
 
@@ -186,65 +192,6 @@ Please be advised that this is also a custom feature of Webpack.
 
 **It is not required for React** but many people enjoy it (and React Native uses a similar mechanism for images). However it may not be portable to some other environments, such as Node.js and Browserify. If you prefer to reference static assets in a more traditional way outside the module system, please let us know [in this issue](https://github.com/facebookincubator/create-react-app/issues/28), and we will consider support for this.
 
-### Install React Bootstrap
-
-You don’t have to use React Bootstrap together with React but it is a popular library for integrating Bootstrap with React apps. If you need it, you can integrate it with Create React App by following these steps:
-
-**Step 1.** Install React Bootstrap and Bootstrap from NPM. React Bootstrap does not include Bootstrap CSS so this needs to be installed as well.
-
-```
-npm install react-bootstrap --save
-npm install bootstrap@3 --save
-```
-
-**Step 2.** Import Bootstrap CSS and optionally Bootstrap theme CSS in the ```index.js``` file.
-
-```
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-```
-
-**Step 3.** Import required React Bootstrap components within ```App.js``` file or your custom component files.
-
-```
-import React, { Component } from 'react';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
-```
-
-Now you are ready to use the imported React Bootstrap components within your component hierarchy defined in the render method. Here is an example [App.js](https://github.com/manavsehgal/react-eshop/blob/master/src/App.js) redone using React Bootstrap.
-
-### Display Lint Output in the Editor
-
->Note: this feature is available with `react-scripts@0.2.0` and higher.
-
-Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
-
-They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can do.
-
-You would need to install an ESLint plugin for your editor first.
-Then make sure `package.json` of your project ends with this block:
-
-```js
-{
-  // ...
-  "eslintConfig": {
-    "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
-}
-```
-
-Projects generated with `react-scripts@0.2.0` and higher should already have it.
-If you don’t need ESLint integration with your editor, you can safely delete those three lines from your `package.json`.
-
-Finally, you will need to install some packages *globally*:
-
-```sh
-npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype
-```
-
-We recognize that this is suboptimal, but it is currently required due to the way we hide the ESLint dependency. The ESLint team is already [working on a solution to this](https://github.com/eslint/eslint/issues/3458) so this may become unnecessary in a couple of months.
-
 
 ### Deploy
 
@@ -286,4 +233,4 @@ Use the [Heroku Buildpack for create-react-app](https://github.com/mars/create-r
 
 ### Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/template/README.md)
+Fork it and make a pull request.
