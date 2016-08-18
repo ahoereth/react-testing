@@ -59,14 +59,11 @@ export default class ApplicationBox extends React.Component {
 // }
 
 
-// Deleted from render because of warnings:
-// <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
-
 render() {
     return (
       <div className="applicationBox">
       <ApplicationList data={this.state.data} />
-
+    <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
       </div>);
 }
 }
