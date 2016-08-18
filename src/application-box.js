@@ -1,11 +1,8 @@
 import React from 'react';
 import ApplicationList from './application-list';
 import ApplicationForm from './application-form';
+import PRODUCTS from './products.json'
 
-var PRODUCTS = [
-{"id":1,"name":"Employee Shift Scheduler","isCurrentVersion":true,"shortDescription":"Automated shift and availability analysis","versionNo":"1.0.0","releaseDate":"2016-08-03T00:00:00.000Z","description":"This app does everything you need - and more!","releaseNotes":"Initial release","imageUrl":"images/share.png","createdAt":"2016-08-16T15:57:38.617Z","updatedAt":"2016-08-16T15:57:38.617Z","ApplicationId":1},
-{"id":3,"name":"Production Manager","isCurrentVersion":true,"shortDescription":"Track production progress","versionNo":"1.0.1","releaseDate":"2016-08-06T00:00:00.000Z","description":"This app does everything you need - and more!","releaseNotes":"Bugfixes","imageUrl":"images/calc.png","createdAt":"2016-08-16T15:57:38.617Z","updatedAt":"2016-08-16T15:57:38.617Z","ApplicationId":2}
-];
 
 export default class ApplicationBox extends React.Component {
 
@@ -57,7 +54,6 @@ export default class ApplicationBox extends React.Component {
 //     this.loadApplicationsFromServer();
 //     setInterval(this.loadApplicationsFromServer, 2000);
 // }
-
 
 render() {
     return (

@@ -34,8 +34,10 @@ export default class ApplicationForm extends React.Component {
   render() {
     return (
       <div className="container">
+
         <form className="applicationForm" onSubmit={this.handleSubmit}>
         <h2 className="applicationForm-heading">Add application</h2>
+        (For display only)
         <label htmlFor="inputApplicationName" className="sr-only">Application name</label>
         <input
           type="text"
