@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from './navigation';
 import ApplicationList from './application-list';
 import ApplicationForm from './application-form';
 
@@ -66,8 +65,8 @@ export default class ApplicationBox extends React.Component {
 render() {
     return (
       <div className="applicationBox">
-      <Navigation/>
       <ApplicationList data={this.state.data} />
+
       </div>);
 }
 }

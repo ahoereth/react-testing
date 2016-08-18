@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
     <Router history={browserHistory}>
-    <Route path="/" component={ApplicationBox}/>
-    <Route path="/about" component={About}/>
-    <Route path="/contact" component={Contact}/>
+    <Route path="home" component={ApplicationBox}/>
+    <Route path="about" component={About}/>
+    <Route path="contact" component={Contact}/>
     </Router>,
     document.getElementById('content'));

@@ -12,7 +12,7 @@ export default class Application extends React.Component {
   }
 
   render() {
-    return <div className="application">
+    return (<div className="application">
       <h3 className="applicationName">
       {this.props.name}
       </h3>
@@ -20,6 +20,6 @@ export default class Application extends React.Component {
       <div className="screenshot">
       <a href='#'><img src= {this.props.imageUrl} /></a>
       </div>
-      </div>;
+      </div>);
   }
 }
