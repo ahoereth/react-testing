@@ -6,23 +6,45 @@ import Contact from './contact';
 // import Product from './product';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
-import Application from './application';
+import {Col, Row} from 'reactstrap';
+// import Application from './application';
 import PRODUCTS from './products.json';
 var $ = require ('jquery');
 
-var result = id => $.grep(PRODUCTS, function(e){ return e.id === id; });
+var result = id => $.grep(PRODUCTS, function(e){
+    return e.id === id
+});
+
+var props = { food: 'default'};
 
 const Product = ({ params: { id } }) => (
     <div>
-        <h3>{id}</h3>
-        {JSON.stringify(result(id))}
+    <Row>
+    <h3 className="applicationName">
+    {result(id)[0].name}
+    </h3>
+    <p>{result(id)[0].shortDescription}</p>
+    <p>{result(id)[0].versionNumber}</p>
+    <div className="screenshot">
+    <img src={"../" + result(id)[0].imageUrl}/>
+    </div>
+    <Col className="col-md-3 sidebar-l sidebar-right hentry">
+    <b>Regular License</b>     180 €
+    Quality control
+    Future updates
+    6 months support from NerdHerd
+    <a href="">What does support include?</a>
+    <form action="">
+    <input type="checkbox" name="extend-support" value="extend-yes"/>Extend support to 12 months
+    </form>
+
+    </Col>
+    </Row>
     </div>
     )
 
 const Products = ({ children }) => (
   <div>
-  <h2>Display Item</h2>
-  These are our products
   {children}
   </div>
   )

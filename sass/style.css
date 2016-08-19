@@ -91,3 +91,16 @@ body {
 .Link {
     color: red;
 }
+
+.sidebar-right {
+    float: right;
+    margin-left: 18px;
+    margin-right: 0;
+}
+
+/*@media (min-width: 1025px)*/
+.sidebar-l {
+    float: left;
+    margin-right: 18px;
+    width: 350px;
+}

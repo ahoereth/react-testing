@@ -2,17 +2,17 @@ import React from 'react';
 import {Row,Col} from 'reactstrap';
 import Application from './application';
 
-export default class Product extends React.Component {
-    constructor(id) {
-        super();
+// export default class Product extends React.Component {
+//     constructor(id) {
+//         super();
 
-    }
-    render() {
-        return (
-          <div>
-          <h3>Product {this.props.id}</h3>
+//     }
+//     render() {
+//         return (
+//           <div>
+//           <h3>Product {this.props.id}</h3>
 
-          </div>
-          );
-    }
-}
+//           </div>
+//           );
+//     }
+// }
