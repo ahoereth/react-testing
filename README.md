@@ -10,6 +10,9 @@ See information below on extending the Create React App by Facebook. Original li
 - [ ] API to Backend connection
 - [ ] Make app as modular as possible
 
+## Screenshot
+
+![Solarlux Apps](images/screenshot.png?raw=true "29 August 2016")
 
 ## Available Scripts
 
