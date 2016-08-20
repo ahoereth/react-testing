@@ -3,6 +3,7 @@ Solarlux Web Apps Testing Repository
 
 [![GitHub issues](https://img.shields.io/github/issues/slx-dev/react-testing.svg)](https://github.com/slx-dev/react-testing/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/slx-dev/react-testing/master/LICENSE.MD)
+<p/>
 
 See information below on extending the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
 
