@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col} from 'reactstrap';
+import {Row,Col,Glyphicon} from 'reactstrap';
 import PRODUCTS from './products.json';
 // import Gallery from './gallery';
 
@@ -27,8 +27,9 @@ export default class Product extends React.Component {
           <p>{productData.shortDescription}</p>
           </Col>
           </Row>
-
+          <div id="product-box">
           <img src={"../" + productData.imageUrl} className="modal-content" id="img01"/>
+          </div>
           <p/>
           {productData.description}
           <p/><h5 className="lead">Support</h5>
@@ -38,21 +39,25 @@ export default class Product extends React.Component {
           <h5 className="lead">Release notes</h5>
           <hr/>
           <b>VER. {productData.versionNo} ({productData.releaseDate.substring(0,10)})</b><br/>
-          <pre>Important bug fixes and interface improvements</pre>
+          <p/><pre>Important bug fixes and interface improvements</pre>
           </Col>
           <Col className="col-md-4 sidebar-l sidebar-right hentry">
           <div className="sidebar-right-box small">
-          <b><span className="lead">Regular License</span></b>     <span className="pull-right amount lead">€180</span>
+          <div className="price">
+          <b><span className="lead pull-left">Regular License</span></b>
+          <span className=" amount lead">€180</span>
+          </div>
           <p/>
-          <span className="glyphicon glyphicon-check"/> Quality control
+          &#10003; Quality control
           <br/>
-          Future updates
-          <br/><span className="glyphicon glyphicon-check"/> 6 months support from NerdHerd
+          &#10003; Future updates
+
+          <br/>&#10003; 6 months support from HausTech
           <br /><a href=""><span className="small">What does support include?</span></a>
           <form action="">
           <p/><input type="checkbox" name="extend-support" value="extend-yes"/> Extend support to 12 months
           <p/>
-          <button className="btn btn-info btn-md btn-block btn-success"><span className="glyphicon glyphicon-shopping-cart"/>Add to Cart</button>
+          <button className="btn btn-info btn-md btn-block btn-success"><span className="glyphicon glyphicon-shopping-cart"/> Add to Cart</button>
           <button className="btn btn-info btn-md btn-block btn-primary">Buy Now</button>
           </form>
           </div>
