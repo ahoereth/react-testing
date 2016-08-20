@@ -16,9 +16,9 @@ See information below on extending the Create React App by Facebook. Original li
 
 ## Getting Started
 
-`git clone https://github.com/slx-dev/react-testing.git`
-`cd react-testing`
-`npm install`
+`git clone https://github.com/slx-dev/react-testing.git`<br>
+`cd react-testing`<br>
+`npm install`<br>
 
 In the project directory, you can run:
 
