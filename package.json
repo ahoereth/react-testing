@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/slx-dev/react-testing.git"
    },
+  "licenses": [{
+    "type": "MIT",
+   }],
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
