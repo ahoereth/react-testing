@@ -6,11 +6,11 @@ Note: Home page starts at /home, due do a routing bug. Fix coming soon.
 
 ### Wish-list
 
-[X] - Bootstrap start
-[X] - Basic routing
-[ ] - Load items as pages with details when clicked
-[ ] - API to Backend connection
-[ ] - Make app as modular as possible
+- [X] Bootstrap start
+- [X] Basic routing
+- [ ] Load items as pages with details when clicked
+- [ ] API to Backend connection
+- [ ] Make app as modular as possible
 
 
 ## Available Scripts
