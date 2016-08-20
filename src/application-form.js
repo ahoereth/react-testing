@@ -1,5 +1,5 @@
 import React from 'react';
-
+var $ = require ('jquery');
 export default class ApplicationForm extends React.Component {
 
   constructor(props) {
@@ -34,9 +34,8 @@ export default class ApplicationForm extends React.Component {
   render() {
     return (
       <div className="container">
-
         <form className="applicationForm" onSubmit={this.handleSubmit}>
-        <h2 className="applicationForm-heading">Add application</h2>
+        <h3 className="applicationForm-heading">Add application</h3>
         (For display only)
         <label htmlFor="inputApplicationName" className="sr-only">Application name</label>
         <input

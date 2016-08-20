@@ -14,9 +14,9 @@ render() {
 
     return (
         <div className="application">
-        <h3 className="applicationName">
+        <h4 className="applicationName">
         {this.props.name}
-        </h3>
+        </h4>
         <span dangerouslySetInnerHTML={this.rawMarkup()} />
         <div className="screenshot">
         <a href={"products/" + this.props.id}>

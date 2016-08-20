@@ -1,6 +1,5 @@
 import React from 'react';
 import {Row,Col} from 'reactstrap';
-import Application from './application';
 
 // export default class Product extends React.Component {
 //     constructor(id) {

@@ -9,6 +9,7 @@ export default class ApplicationList extends React.Component {
       {
         this.props.data.map(function(application) {
           return (
+            <div className="application-cols">
             <Col key={application.id} md={3}>
               <Application
                 name={application.name}
@@ -16,9 +17,10 @@ export default class ApplicationList extends React.Component {
                 key={application.id}
                 shortDescription={application.shortDescription}
                 imageUrl={application.imageUrl}>
-                {application.description}
+                {application.shortDescription}
               </Application>
             </Col>
+            </div>
           );
         })
       }
