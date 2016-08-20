@@ -2,8 +2,6 @@
 
 See information below on extending the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
 
-Note: Home page starts at /home, due do a routing bug. Fix coming soon.
-
 ### Wish-list
 
 - [X] Bootstrap start

@@ -1,6 +1,8 @@
 import React from 'react';
 import ApplicationList from './application-list';
 import ApplicationForm from './application-form';
+import Jumbotron from './jumbotron';
+import Footer from './footer';
 import PRODUCTS from './products.json';
 
 
@@ -58,8 +60,10 @@ export default class ApplicationBox extends React.Component {
 render() {
     return (
       <div className="applicationBox">
+      <Jumbotron/>
       <ApplicationList data={this.state.data} />
-    <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
+      <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
+      <Footer/>
       </div>);
 }
 }

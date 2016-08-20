@@ -5,6 +5,7 @@ import About from './about';
 import Contact from './contact';
 import { Router, Route, browserHistory } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 import Product from './product';
 import Products from './products';
 
