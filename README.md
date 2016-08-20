@@ -14,7 +14,11 @@ See information below on extending the Create React App by Facebook. Original li
 
 ![Solarlux Apps](images/screenshot.png?raw=true "29 August 2016")
 
-## Available Scripts
+## Getting Started
+
+`git clone https://github.com/slx-dev/react-testing.git`
+`cd react-testing`
+`npm install`
 
 In the project directory, you can run:
 
