@@ -5,15 +5,19 @@ Solarlux Web Apps Testing Repository
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/slx-dev/react-testing/master/LICENSE.MD)
 <p/>
 
-See information below on extending the Create React App by Facebook. Original link: https://github.com/facebookincubator/create-react-app
+This site is built on the [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook.
 
-### Wish-list
+### Todo
 
 - [X] Bootstrap start
 - [X] Basic routing
 - [X] Load items as pages with details when clicked
-- [ ] API to Backend connection
-- [ ] Make app as modular as possible
+- [ ] Fix loading display issue where unstyled site displays before loading css
+- [ ] Make app as modular as useful with top level app and less html in index.html
+- [ ] Breadcrumb trail at top of page or similar navigation function
+- [ ] Connect with sequalize or similar
+- [ ] Extend API to backend database
+
 
 ### Screenshot
 
