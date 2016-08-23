@@ -63,7 +63,7 @@ export default class ApplicationBox extends React.Component {
         <Jumbotron/>
         <ApplicationList data={this.state.data} />
 
-        <Footer/>
+        
       </div>);
   }
 }
