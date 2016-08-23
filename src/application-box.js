@@ -11,7 +11,7 @@ export default class ApplicationBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: PRODUCTS };
-}
+  }
 // loadApplicationsFromServer() {
 //     $.ajax({
 //       url: '/api/apps',
@@ -57,13 +57,16 @@ export default class ApplicationBox extends React.Component {
 //     setInterval(this.loadApplicationsFromServer, 2000);
 // }
 
-render() {
+  render() {
     return (
       <div className="applicationBox">
-      <Jumbotron/>
-      <ApplicationList data={this.state.data} />
-      <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
-      <Footer/>
+        <Jumbotron/>
+        <ApplicationList data={this.state.data} />
+
+        <Footer/>
       </div>);
+  }
 }
-}
+
+
+//       <ApplicationForm onApplicationSubmit={this.handleApplicationSubmit} />
