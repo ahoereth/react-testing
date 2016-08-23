@@ -15,7 +15,6 @@ export default class ApplicationList extends React.Component {
                 name={application.name}
                 key={application.id}
                 id={application.id}
-                key={application.id}
                 shortDescription={application.shortDescription}
                 imageUrl={application.imageUrl}>
                 {application.shortDescription}

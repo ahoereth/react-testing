@@ -1,8 +1,6 @@
 import React from 'react';
 import ApplicationList from './application-list';
-import ApplicationForm from './application-form';
 import Jumbotron from './jumbotron';
-import Footer from './footer';
 import PRODUCTS from './products.json';
 
 

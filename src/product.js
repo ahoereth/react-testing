@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col,Glyphicon} from 'reactstrap';
+import {Row,Col} from 'reactstrap';
 import PRODUCTS from './products.json';
 // import Gallery from './gallery';
 
@@ -18,7 +18,7 @@ export default class Product extends React.Component {
           <Col className="col-md-7">
           <Row id="icon">
           <Col className="col-md-3 app-title">
-          <img src={productData.iconUrl} />
+          <img alt="{productData.name}" src={productData.iconUrl} />
           </Col>
           <Col className="col-md-9">
           <h3 className="applicationName">
@@ -28,7 +28,7 @@ export default class Product extends React.Component {
           </Col>
           </Row>
           <div id="product-box">
-          <img src={"../" + productData.imageUrl} className="modal-content" id="img01"/>
+          <img alt="{productData.name}" src={"../" + productData.imageUrl} className="modal-content" id="img01"/>
           </div>
           <p/>
           {productData.description}
