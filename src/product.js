@@ -57,8 +57,8 @@ export default class Product extends React.Component {
           <form action="">
           <p/><input type="checkbox" name="extend-support" value="extend-yes"/> Extend support to 12 months
           <p/>
-          <button className="btn btn-info btn-md btn-block btn-success"><span className="glyphicon glyphicon-shopping-cart"/> Add to Cart</button>
-          <button className="btn btn-info btn-md btn-block btn-primary">Buy Now</button>
+          <a role="button" className="btn btn-info btn-md btn-block btn-success" href={"/dl/" + productData.name + ".application"}>Launch</a>
+          <button className="btn btn-info btn-md btn-block btn-primary"><span className="glyphicon glyphicon-shopping-cart"/> Buy Now</button>
           </form>
           </div>
           <div>
